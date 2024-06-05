@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+   .button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+.input-container {
+    display: flex; /* Added to align label and input horizontally */
+    align-items: center; /* Added to vertically center items in the container */
+}
+
+.input-container label {
+    margin-right: 10px; /* Adjust spacing if needed */
+}
+
+
+
+</style>
+
+<br><br><br><br><br><br><br>
+<img src="..\static\content\locked.png" alt="lock" class='center'style="display: block;
+margin-left: auto;
+margin-right: auto;
+width:20%">
+<br/>
+<div class="typewriter">
+<h2 style="text-align: center;font-family: 'Montserrat', sans-serif">{{ title }}</h2>
+<h3 style="text-align: center;font-family: 'Montserrat', sans-serif">{{ message }}</h3>
+<br>
+</div>
+
+       <div class="center1">
+        <div class="form">
+<form action="/about1" method="post" enctype="multipart/form-data" >
+    
+    <input type="file" name="file" class='button-27' />
+    <br>
+    <div class="input-container">
+    <label>Enter your password</label>
+    <br>
+    <input type="password" name="password" />
+    </div>
+    <br>
+    <div style="text-align: left;">
+    <input style="text-align: left;" type="submit" class="button-40"value="Upload" >
+    </div>
+    
+       </div>
+    </div>
+
+<br><br><br><br><br><br><br><br>
+</div>
+    {% endblock %}
+
